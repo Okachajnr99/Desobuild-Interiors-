@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     <style>
         /* CSS Reset & Variables */
         :root {
-            /* Light Theme */
+            /* Light Theme Only */
             --bg-primary: #FFFFF7;
             --text-primary: #1A1A1A;
             --text-secondary: #666666;
@@ -54,18 +54,6 @@
             --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        [data-theme="dark"] {
-            --bg-primary: #0A0A0A;
-            --text-primary: #F0F0F0;
-            --text-secondary: #AAAAAA;
-            --card-bg: #1A1A1A;
-            --navy: #3A7BD5;
-            --sienna: #FF6B6B;
-            --taupe: #A09080;
-            --light-gray: #1A1A1A;
-            --border-color: rgba(255, 255, 255, 0.08);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -83,7 +71,6 @@
             color: var(--text-primary);
             background-color: var(--bg-primary);
             overflow-x: hidden;
-            transition: background-color var(--transition-base), color var(--transition-base);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -142,37 +129,13 @@
             transition: transform var(--transition-base), width var(--transition-fast), height var(--transition-fast);
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            box-shadow: var(--shadow-md);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-            transition: all var(--transition-base);
-            border: 1px solid var(--border-color);
-        }
-
-        .theme-toggle:hover {
-            transform: rotate(30deg);
-            box-shadow: var(--shadow-lg);
-        }
-
         /* Modern Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 900;
-            background: rgba(var(--bg-primary-rgb), 0.9);
+            background: rgba(255, 255, 247, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
@@ -211,7 +174,7 @@
             display: inline-block;
         }
 
-        /* Modern Navigation - UPDATED TEXT COLOR */
+        /* Modern Navigation */
         .main-nav ul {
             display: flex;
             list-style: none;
@@ -225,7 +188,7 @@
 
         .nav-item a {
             text-decoration: none;
-            color: var(--sienna) !important; /* Updated to sienna color #C75233 */
+            color: var(--sienna);
             font-weight: 500;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
@@ -309,14 +272,14 @@
         .overlay-nav a {
             font-size: 2.5rem;
             font-weight: 600;
-            color: var(--sienna) !important; /* Updated to sienna color */
+            color: var(--sienna);
             text-decoration: none;
             transition: color var(--transition-fast);
             font-family: 'Playfair Display', serif;
         }
 
         .overlay-nav a:hover {
-            color: var(--navy) !important;
+            color: var(--navy);
         }
 
         /* Page Transitions */
@@ -1243,11 +1206,6 @@
     <div id="custom-cursor"></div>
     <div id="cursor-follower"></div>
 
-    <!-- Theme Toggle -->
-    <div class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon" id="themeIcon"></i>
-    </div>
-
     <!-- Page Transition Overlay -->
     <div class="page-transition" id="pageTransition"></div>
 
@@ -1398,14 +1356,14 @@
                             <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Luxury penthouse interior" class="project-img">
                             <div class="project-overlay">
                                 <h3>Karen Luxury Villa</h3>
-                                <p class="project-type">Nairobi • Residential • 2026</p>
+                                <p class="project-type">Nairobi • Residential • 2023</p>
                             </div>
                         </div>
                         <div class="project-card reveal-on-scroll">
                             <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern office interior" class="project-img">
                             <div class="project-overlay">
                                 <h3>Westlands Office Tower</h3>
-                                <p class="project-type">Nairobi • Office • 2026</p>
+                                <p class="project-type">Nairobi • Office • 2023</p>
                             </div>
                         </div>
                         <div class="project-card reveal-on-scroll">
@@ -1790,7 +1748,7 @@
                             <div>
                                 <div class="client-name">Sarah Kamau</div>
                                 <div class="client-title">CEO, TechGlobal Africa</div>
-                                <div class="project-ref">Westlands Office Tower • Completed 2026</div>
+                                <div class="project-ref">Westlands Office Tower • Completed 2023</div>
                             </div>
                     </div>
                 </div>
@@ -1802,7 +1760,7 @@
                         <div>
                             <div class="client-name">Michael Omondi</div>
                             <div class="client-title">Managing Director, Vertex Capital</div>
-                            <div class="project-ref">Karen Luxury Villa • Completed 2026</div>
+                            <div class="project-ref">Karen Luxury Villa • Completed 2023</div>
                         </div>
                     </div>
                 </div>
@@ -1831,7 +1789,7 @@
                     <div class="success-card">
                         <div class="success-number">Award</div>
                         <h3>Winning Design</h3>
-                        <p>Our Karen Villa project received the East Africa Design Excellence Award 2026</p>
+                        <p>Our Karen Villa project received the East Africa Design Excellence Award 2023</p>
                     </div>
                     <div class="success-card">
                         <div class="success-number">30%</div>
@@ -2077,12 +2035,12 @@
 
         // Portfolio Data
         const portfolioData = [
-            { id: 1, category: 'residential', img: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Karen Luxury Villa', location: 'Nairobi', year: '2026', type: 'Residential' },
-            { id: 2, category: 'residential', img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Runda Residence', location: 'Nairobi', year: '2026', type: 'Residential' },
-            { id: 3, category: 'kitchen', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: "Muthaiga Kitchen", location: 'Nairobi', year: '2026', type: 'Kitchen' },
-            { id: 4, category: 'commercial', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Two Rivers Boutique', location: 'Nairobi', year: '2026', type: 'Commercial' },
+            { id: 1, category: 'residential', img: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Karen Luxury Villa', location: 'Nairobi', year: '2023', type: 'Residential' },
+            { id: 2, category: 'residential', img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Runda Residence', location: 'Nairobi', year: '2023', type: 'Residential' },
+            { id: 3, category: 'kitchen', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: "Muthaiga Kitchen", location: 'Nairobi', year: '2023', type: 'Kitchen' },
+            { id: 4, category: 'commercial', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Two Rivers Boutique', location: 'Nairobi', year: '2023', type: 'Commercial' },
             { id: 5, category: 'commercial', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Westlands Restaurant', location: 'Nairobi', year: '2022', type: 'Restaurant' },
-            { id: 6, category: 'office', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Westlands Office Tower', location: 'Nairobi', year: '2026', type: 'Office' },
+            { id: 6, category: 'office', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Westlands Office Tower', location: 'Nairobi', year: '2023', type: 'Office' },
             { id: 7, category: 'office', img: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Upper Hill Office', location: 'Nairobi', year: '2022', type: 'Office' },
             { id: 8, category: 'hotel', img: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Sarova Hotel Lobby', location: 'Nairobi', year: '2022', type: 'Hotel' },
             { id: 9, category: 'hotel', img: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80', title: 'Diani Beach Resort', location: 'Coast', year: '2021', type: 'Hotel' }
@@ -2091,7 +2049,6 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             initCustomCursor();
-            initThemeToggle();
             initPageTransitions();
             initScrollAnimations();
             initCounters();
@@ -2130,33 +2087,6 @@
                     follower.style.transform = 'scale(1)';
                     follower.style.background = 'rgba(199, 82, 51, 0.1)';
                 });
-            });
-        }
-
-        // Theme Toggle
-        function initThemeToggle() {
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = document.getElementById('themeIcon');
-            const html = document.documentElement;
-            
-            // Check saved theme
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            html.setAttribute('data-theme', savedTheme);
-            themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-            
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = html.getAttribute('data-theme');
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                
-                html.setAttribute('data-theme', newTheme);
-                themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-                localStorage.setItem('theme', newTheme);
-                
-                // Add click effect
-                themeToggle.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    themeToggle.style.transform = 'scale(1)';
-                }, 150);
             });
         }
 
